@@ -11,6 +11,7 @@ fn dogfood() {
         std::env::set_current_dir(root_dir.join(d)).unwrap();
         let output = std::process::Command::new("cargo")
             .arg("run")
+            .arg(if cfg!(debug) { "--debug" } else { "--release" })
             .arg("--bin").arg("cargo-clippy")
             .arg("--manifest-path").arg(root_dir.join("Cargo.toml"))
             .output().unwrap();
