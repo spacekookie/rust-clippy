@@ -78,6 +78,7 @@ pub mod attrs;
 pub mod bit_mask;
 pub mod blacklisted_name;
 pub mod block_in_if_condition;
+// pub mod boxes;
 pub mod booleans;
 pub mod bytecount;
 pub mod collapsible_if;
